@@ -4,13 +4,15 @@ import HomePage from "./Components/HomePage";
 import MoviesPage from "./Components/MoviesPage";
 import MovieDetailsPage from "./Components/MovieDetailsPage";
 import "./App.css";
+import { Fragment } from "react";
 
 export default function App() {
   return (
-    <div>
-      <Navigation />
+    <Fragment>
+      {/* <Navigation /> */}
 
       <hr />
+
       <Switch>
         <Route path="/" exact>
           <HomePage />
@@ -23,11 +25,7 @@ export default function App() {
         <Route path="/movies/:movieId">
           <MovieDetailsPage />
         </Route>
-
-        <Route>
-          <HomePage />
-        </Route>
       </Switch>
-    </div>
+    </Fragment>
   );
 }
