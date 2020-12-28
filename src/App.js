@@ -1,10 +1,33 @@
+import { Switch, Route } from "react-router-dom";
+import Navigation from "./Components/Navigation";
+import HomePage from "./Components/HomePage";
+import MoviesPage from "./Components/MoviesPage";
+import MovieDetailsPage from "./Components/MovieDetailsPage";
 import "./App.css";
-const KEY = "7b5c027beb1723358e7047ebab76ed47";
 
 export default function App() {
   return (
-    <>
-      <h3>goit-react-hw-04-movies</h3>
-    </>
+    <div>
+      <Navigation />
+
+      <hr />
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+
+        <Route path="/movies" exact>
+          <MoviesPage />
+        </Route>
+
+        <Route path="/movies/:movieId">
+          <MovieDetailsPage />
+        </Route>
+
+        <Route>
+          <HomePage />
+        </Route>
+      </Switch>
+    </div>
   );
 }
