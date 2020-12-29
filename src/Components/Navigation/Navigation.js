@@ -16,7 +16,7 @@ export default function Navigation() {
         Search
       </NavLink>
       <NavLink
-        to="/movies/:movieId"
+        to="/movies/:moviesId"
         className={s.link}
         activeClassName={s.activLink}
       >

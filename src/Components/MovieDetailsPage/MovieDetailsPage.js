@@ -3,20 +3,18 @@ import { useParams } from "react-router-dom";
 import { ApiServiceDetails } from "../ApiService/ApiService";
 
 export default function MovieDetailsPage() {
-  const { movieId } = useParams(null);
+  const { moviesId } = useParams();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
-  console.log(movie);
+  console.log(moviesId);
 
   useEffect(() => {
-    if (!movie) {
-      return;
-    }
-
-    ApiServiceDetails(movieId)
-      .then((data) => setMovie(data))
-      .catch(error);
-  }, [movie]);
+    ApiServiceDetails(moviesId)
+      .then((data) => {
+        setMovie(data);
+      })
+      .catch(setError(error));
+  }, []);
   return (
     <>
       <h1>MovieDetailsPage</h1>

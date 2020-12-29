@@ -19,9 +19,9 @@ https://api.themoviedb.org/3/search/movie?api_key=${KEY}&language=en-US&query=${
   return await Promise.reject(new Error("not found"));
 }
 
-export async function ApiServiceDetails(movieId) {
+export async function ApiServiceDetails(moviesId) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${KEY}&append_to_response`
+    `https://api.themoviedb.org/3/movie/${moviesId}?api_key=${KEY}`
   );
   if (response.ok) {
     return response.json();
