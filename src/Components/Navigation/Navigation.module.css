@@ -1,10 +1,10 @@
 .link {
   margin-left: 14px;
   text-decoration: none;
-  color: blue;
+  color: #0000ff;
 }
 
 .activLink {
   text-decoration: none;
-  color: crimson;
+  color: #dc143c;
 }

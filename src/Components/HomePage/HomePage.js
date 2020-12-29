@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import { ApiServiceHome } from "../ApiService/ApiService";
+import Loader from "../Loader/Loader";
 // import s from "./HomePage.module.css"
 
 export default function HomePage() {
@@ -24,7 +25,7 @@ export default function HomePage() {
   return (
     <>
       {status === "idle" && <h1>HomePage</h1>}
-      {status === "pending" && <b>loaded</b>}
+      {status === "pending" && <Loader />}
       {status === "rejected" && <b>{error}</b>}
       {status === "resolved" && (
         <ul>

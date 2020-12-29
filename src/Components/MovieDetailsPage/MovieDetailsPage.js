@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ApiServiceDetails } from "../ApiService/ApiService";
+import Loader from "../Loader/Loader";
 // import s from "./MovieDetailsPage.module.css";
 
 export default function MovieDetailsPage() {
@@ -28,7 +29,7 @@ export default function MovieDetailsPage() {
   return (
     <>
       {status === "idle" && <h1>MovieDetailsPage</h1>}
-      {status === "pending " && <b>loaded</b>}
+      {status === "pending " && <Loader />}
       {status === "rejected " && <b>error</b>}
       {status === "resolved" && (
         <>

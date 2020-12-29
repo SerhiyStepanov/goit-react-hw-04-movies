@@ -1,10 +1,54 @@
-import {ApiServiceSearch} from "../ApiService/ApiService"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ApiServiceSearch } from "../ApiService/ApiService";
+import Loader from "../Loader/Loader";
 // import s from "./MoviesPage.module.css"
 
 export default function MoviesPage() {
-    return (
-        <>
-        <h1>MoviesPage</h1>
-        </>
-    )
+  const [query, setQuery] = useState("");
+  const [search, setSearch] = useState([]);
+  const [error, setError] = useState(null);
+
+  const searchMovieByName = (e) => {
+    setQuery(e.target.value);
+  };
+
+  useEffect(() => {
+    if (query === "") {
+      return;
+    }
+
+    ApiServiceSearch(query)
+      .then((data) => {
+        setSearch(data.results);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }, [query]);
+  return (
+    <div>
+      <label>
+        <input
+          type="text"
+          value={query}
+          onChange={searchMovieByName}
+          placeholder="search movie"
+          className="input"
+        />
+      </label>
+
+      {search.length > 0 && (
+        <ul>
+          {search.map((movie) => {
+            return (
+              <li key={movie.id}>
+                <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
 }
