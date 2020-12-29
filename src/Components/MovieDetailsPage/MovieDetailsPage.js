@@ -6,23 +6,37 @@ export default function MovieDetailsPage() {
   const { moviesId } = useParams();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
-  console.log(moviesId);
+  const [status, setStatus] = useState("idle");
 
   useEffect(() => {
+    if (!moviesId) {
+      return;
+    }
+    setStatus("pending");
+
     ApiServiceDetails(moviesId)
       .then((data) => {
         setMovie(data);
+        setStatus("resolved");
       })
-      .catch(setError(error));
+      .catch(error);
+    setError(error);
+    setStatus("rejected");
   }, []);
   return (
     <>
-      <h1>MovieDetailsPage</h1>
-      {movie && (
+      {status === "idle" && <h1>MovieDetailsPage</h1>}
+      {status === "pending " && <b>loaded</b>}
+      {status === "rejected " && <b>error</b>}
+      {status === "resolved" && (
         <>
-          <p>{movie.id}</p>
           <h3>{movie.title}</h3>
-          <img src={movie.homepage} />
+          <p>{movie.id}</p>
+
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            alt=""
+          />
         </>
       )}
     </>
