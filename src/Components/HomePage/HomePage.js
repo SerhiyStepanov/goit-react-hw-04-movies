@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <div className={s.HomePage}>
       {status === "idle" && <h1>HomePage</h1>}
-      {status === "pending" && <Loader />}
+      {status === "pending" && <Loader styles={{}} />}
       {status === "rejected" && <b>{error}</b>}
       {status === "resolved" && (
         <ul className={s.HomePageUl}>

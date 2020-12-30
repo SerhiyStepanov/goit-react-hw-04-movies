@@ -7,7 +7,7 @@ export default class App extends Component {
     return (
       <Loader
         type="ThreeDots"
-        color="#dc143c"
+        color="#19324b"
         height={100}
         width={100}
         timeout={5000}

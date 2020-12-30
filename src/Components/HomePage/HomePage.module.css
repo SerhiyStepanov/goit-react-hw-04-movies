@@ -17,18 +17,19 @@
 }
 
 .CardImage {
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .Title {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 6px;
   font-size: 16px;
   color: #fff8dc;
 }
 
 .CardList:hover,
 .CardList:focus {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0.6em 0.3em #fff8dc;
 }
