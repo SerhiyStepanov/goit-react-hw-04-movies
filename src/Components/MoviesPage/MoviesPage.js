@@ -33,17 +33,26 @@ export default function MoviesPage() {
           type="text"
           value={query}
           onChange={searchMovieByName}
-          placeholder="search movie"
+          placeholder="Search movie"
           className={s.Input}
         />
       </label>
 
       {search.length > 0 && (
-        <ul>
+        <ul className={s.HomePageUl}>
           {search.map((movie) => {
             return (
-              <li key={movie.id}>
-                <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+              <li key={movie.id} className={s.CardList}>
+                <Link to={`/movies/${movie.id}`}>
+                  <div className={s.Card}>
+                    <img
+                      className={s.CardImage}
+                      src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                      alt=""
+                    />
+                    <p className={s.Title}>{movie.title}</p>
+                  </div>
+                </Link>
               </li>
             );
           })}

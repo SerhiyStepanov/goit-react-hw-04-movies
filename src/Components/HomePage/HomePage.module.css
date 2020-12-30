@@ -31,5 +31,5 @@
 
 .CardList:hover,
 .CardList:focus {
-  box-shadow: 0 0 0.6em 0.3em #fff8dc;
+  box-shadow: 0 0 0.75em 0.5em #fff8dc;
 }
