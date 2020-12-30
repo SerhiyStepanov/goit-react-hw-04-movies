@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ApiServiceSearch } from "../ApiService/ApiService";
-import Loader from "../Loader/Loader";
+
 import s from "./MoviesPage.module.css";
+import DefaultImage from "../Default";
 
 export default function MoviesPage() {
   const [query, setQuery] = useState("");
@@ -50,6 +51,7 @@ export default function MoviesPage() {
                       src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                       alt=""
                     />
+
                     <p className={s.Title}>{movie.title}</p>
                   </div>
                 </Link>
