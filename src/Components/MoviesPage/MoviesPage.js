@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ApiServiceSearch } from "../ApiService/ApiService";
 import s from "./MoviesPage.module.css";
-// import DefauImage from "../Default/default.jpg";
+import DefauImage from "../Default/default.jpg";
 
-export default function MoviesPage() {
+export default function MoviesPage({ IMAGEURL = DefauImage }) {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState([]);
   const [error, setError] = useState(null);
-
-  const URLIMAGE = "https://image.tmdb.org/t/p/w500/";
 
   const searchMovieByName = (e) => {
     setQuery(e.target.value);
@@ -44,15 +42,12 @@ export default function MoviesPage() {
       {search.length > 0 && (
         <ul className={s.HomePageUl}>
           {search.map((movie) => {
+            const IMAGEURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
             return (
               <li key={movie.id} className={s.CardList}>
                 <Link to={`/movies/${movie.id}`}>
                   <div className={s.Card}>
-                    <img
-                      className={s.CardImage}
-                      src={`${URLIMAGE}${movie.poster_path}`}
-                      alt=""
-                    />
+                    <img className={s.CardImage} src={IMAGEURL} alt="" />
                     <p className={s.Title}>{movie.title}</p>
                   </div>
                 </Link>
