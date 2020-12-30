@@ -1,0 +1,28 @@
+.Container {
+  padding: 30px;
+}
+
+.CardContainer {
+  display: flex;
+}
+
+.CardContent {
+  margin-left: 30px;
+}
+
+.CardImage {
+  width: 240px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.CardTitle {
+  margin-top: 0;
+  font-size: 24px;
+  color: #c4c1b8;
+}
+
+.Text {
+  font-size: 16px;
+  color: #c4c1b8;
+}
