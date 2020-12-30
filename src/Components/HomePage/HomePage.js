@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import { ApiServiceHome } from "../ApiService/ApiService";
 import Loader from "../Loader/Loader";
-// import s from "./HomePage.module.css"
+import s from "./HomePage.module.css";
 
 export default function HomePage() {
   const [movies, setMovies] = useState(null);
@@ -23,21 +23,30 @@ export default function HomePage() {
       });
   }, []);
   return (
-    <>
+    <div className={s.HomePage}>
       {status === "idle" && <h1>HomePage</h1>}
       {status === "pending" && <Loader />}
       {status === "rejected" && <b>{error}</b>}
       {status === "resolved" && (
-        <ul>
+        <ul className={s.HomePageUl}>
           {movies.map((movie) => {
             return (
-              <li key={movie.id}>
-                <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+              <li key={movie.id} className={s.CardList}>
+                <Link to={`/movies/${movie.id}`} className={s.CardLink}>
+                  <div className={s.Card}>
+                    <img
+                      className={s.CardImage}
+                      src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                      alt=""
+                    />
+                    <p className={s.Title}>{movie.title}</p>
+                  </div>
+                </Link>
               </li>
             );
           })}
         </ul>
       )}
-    </>
+    </div>
   );
 }

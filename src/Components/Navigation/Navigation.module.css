@@ -1,10 +1,14 @@
+.Navigation {
+  padding: 10px;
+  font-size: 18px;
+}
 .link {
-  margin-left: 14px;
+  margin-left: 30px;
   text-decoration: none;
-  color: #0000ff;
+  color: #fff8dc;
 }
 
 .activLink {
   text-decoration: none;
-  color: #dc143c;
+  color: #b4b412;
 }
