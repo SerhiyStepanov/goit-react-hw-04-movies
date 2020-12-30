@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ApiServiceSearch } from "../ApiService/ApiService";
 import Loader from "../Loader/Loader";
-// import s from "./MoviesPage.module.css"
+import s from "./MoviesPage.module.css";
 
 export default function MoviesPage() {
   const [query, setQuery] = useState("");
@@ -27,14 +27,14 @@ export default function MoviesPage() {
       });
   }, [query]);
   return (
-    <div>
-      <label>
+    <div className={s.Container}>
+      <label className={s.Label}>
         <input
           type="text"
           value={query}
           onChange={searchMovieByName}
           placeholder="search movie"
-          className="input"
+          className={s.Input}
         />
       </label>
 

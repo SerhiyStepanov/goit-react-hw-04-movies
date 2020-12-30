@@ -25,7 +25,11 @@ export default function HomePage() {
   return (
     <div className={s.HomePage}>
       {status === "idle" && <h1>HomePage</h1>}
-      {status === "pending" && <Loader styles={{}} />}
+      {status === "pending" && (
+        <div style={{ textAlign: "center", marginTop: "30%" }}>
+          <Loader />
+        </div>
+      )}
       {status === "rejected" && <b>{error}</b>}
       {status === "resolved" && (
         <ul className={s.HomePageUl}>

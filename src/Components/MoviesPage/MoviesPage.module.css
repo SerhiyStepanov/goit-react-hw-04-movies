@@ -1,0 +1,11 @@
+.Container {
+  padding: 30px;
+}
+
+.Input {
+  padding: 3px 6px;
+  border: 1px solid #fff8dc;
+  border-radius: 3px;
+  background-color: #19324b;
+  color: #fff8dc;
+}
