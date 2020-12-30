@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ApiServiceSearch } from "../ApiService/ApiService";
 import s from "./MoviesPage.module.css";
-import DefauImage from "../Default/default.jpg";
+import defauItImage from "../Default/default.jpg";
 
-export default function MoviesPage({ IMAGEURL = DefauImage }) {
+export default function MoviesPage() {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState([]);
   const [error, setError] = useState(null);
@@ -47,7 +47,11 @@ export default function MoviesPage({ IMAGEURL = DefauImage }) {
               <li key={movie.id} className={s.CardList}>
                 <Link to={`/movies/${movie.id}`}>
                   <div className={s.Card}>
-                    <img className={s.CardImage} src={IMAGEURL} alt="" />
+                    <img
+                      className={s.CardImage}
+                      src={movie.poster_path ? IMAGEURL : defauItImage}
+                      alt=""
+                    />
                     <p className={s.Title}>{movie.title}</p>
                   </div>
                 </Link>
