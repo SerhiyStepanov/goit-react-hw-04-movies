@@ -1,10 +1,10 @@
+import { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 import HomePage from "./Components/HomePage";
 import MoviesPage from "./Components/MoviesPage";
 import MovieDetailsPage from "./Components/MovieDetailsPage";
 import "./App.css";
-import { Fragment } from "react";
 
 export default function App() {
   return (
@@ -24,6 +24,10 @@ export default function App() {
 
         <Route path="/movies/:moviesId">
           <MovieDetailsPage />
+        </Route>
+
+        <Route>
+          <HomePage />
         </Route>
       </Switch>
     </Fragment>

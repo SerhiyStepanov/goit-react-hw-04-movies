@@ -52,7 +52,9 @@ export default function MoviesPage() {
                       src={movie.poster_path ? IMAGEURL : defauItImage}
                       alt=""
                     />
-                    <p className={s.Title}>{movie.title}</p>
+                    <div className={s.CardContent}>
+                      <p className={s.Title}>{movie.title}</p>
+                    </div>
                   </div>
                 </Link>
               </li>

@@ -43,7 +43,9 @@ export default function HomePage() {
                       src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                       alt=""
                     />
-                    <p className={s.Title}>{movie.title}</p>
+                    <div className={s.CardContent}>
+                      <p className={s.Title}>{movie.title}</p>
+                    </div>
                   </div>
                 </Link>
               </li>

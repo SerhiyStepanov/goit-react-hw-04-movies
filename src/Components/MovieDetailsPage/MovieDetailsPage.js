@@ -42,6 +42,7 @@ export default function MovieDetailsPage() {
             </div>
             <div className={s.CardContent}>
               <h4 className={s.CardTitle}>{movie.title}</h4>
+              <p className={s.Text}>Overview : {movie.overview}</p>
               <p className={s.Text}>Release : {movie.release_date}</p>
               <p className={s.Text}>Budget : {movie.budget}</p>
               <p className={s.Text}>Id : {movie.id}</p>
