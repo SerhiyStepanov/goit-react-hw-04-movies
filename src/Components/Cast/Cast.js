@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ApiServiceDetailsCredits } from "../ApiService/ApiService";
+import defaultAvatar from "../Default/avatar.jpg";
 import s from "./Cast.module.css";
 
 export default function Cast({ moviesId }) {
@@ -16,21 +17,29 @@ export default function Cast({ moviesId }) {
       .catch((error) => setError(error));
   }, [moviesId]);
   return (
-    <ul className={s.CastList}>
-      Cast :
-      {cast.map((el) => {
-        return (
-          <li key={el.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${el.profile_path}`}
-              alt=""
-              className=""
-              width="60px"
-            />
-            <p>{el.name}</p>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <h3 className={s.CastListTitle}>Cast </h3>
+      <ul className={s.CastList}>
+        {cast.map((el) => {
+          return (
+            <li key={el.id} className={s.CastCard}>
+              <>
+                <img
+                  className={s.CastCardImage}
+                  src={
+                    el.profile_path
+                      ? `https://image.tmdb.org/t/p/w500/${el.profile_path}`
+                      : defaultAvatar
+                  }
+                  alt=""
+                  className=""
+                />
+                <p className={s.CastCardText}> {el.name}</p>
+              </>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import HomePage from "./Components/HomePage";
 import MoviesPage from "./Components/MoviesPage";
 import MovieDetailsPage from "./Components/MovieDetailsPage";
 import "./App.css";
+import Cast from "./Components/Cast/Cast";
 
 export default function App() {
   return (

@@ -42,3 +42,14 @@
   font-size: 16px;
   color: #fff8dc;
 }
+
+.link {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #fff8dc;
+  cursor: pointer;
+}
+
+.activLink {
+  color: #c89632;
+}

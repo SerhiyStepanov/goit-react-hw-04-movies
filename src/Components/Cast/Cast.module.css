@@ -1,4 +1,29 @@
 .CastList {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.CastListTitle {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  color: #fff8dc;
+}
+
+.CastCard {
+  display: block;
+  width: 60px;
+  margin: 10px;
+}
+
+.CastCardImage {
+  max-width: 60px;
+  height: 90px;
+}
+
+.CastCardText {
+  padding: 3px;
+  font-size: 10px;
+  color: #fff8dc;
 }

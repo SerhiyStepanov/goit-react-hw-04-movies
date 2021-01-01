@@ -1,0 +1,18 @@
+.reviewsList {
+  padding-left: 0;
+}
+
+.reviewsItem {
+  list-style: none;
+}
+.reviewsTitle {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  color: #fff8dc;
+}
+.reviewsText {
+  padding: 3px;
+  font-size: 14px;
+  color: #fff8dc;
+}

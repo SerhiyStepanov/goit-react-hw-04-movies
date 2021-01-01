@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ApiServiceDetailsReviews } from "../ApiService/ApiService";
+import s from "./Reviews.module.css";
 
 export default function Reviews({ moviesId }) {
   const [reviews, setReviews] = useState([]);
@@ -15,16 +16,20 @@ export default function Reviews({ moviesId }) {
       })
       .catch((error) => setError(error));
   }, [moviesId]);
+
   return (
-    <ul>
-      {reviews.map((el) => {
-        return (
-          <li key={el.id}>
-            <h4>{el.author}</h4>
-            <p>{el.content}</p>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <ul className={s.reviewsList}>
+        {reviews &&
+          reviews.map((el) => {
+            return (
+              <li key={el.id} className={s.reviewsItem}>
+                <h4 className={s.reviewsTitle}>{el.author}</h4>
+                <p className={s.reviewsText}>{el.content}</p>
+              </li>
+            );
+          })}
+      </ul>
+    </>
   );
 }
