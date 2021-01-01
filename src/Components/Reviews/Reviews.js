@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { ApiServiceDetailsReviews } from "../ApiService/ApiService";
 
 export default function Reviews({ moviesId }) {
