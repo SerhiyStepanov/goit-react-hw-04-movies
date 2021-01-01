@@ -1,0 +1,4 @@
+.CastList {
+  display: flex;
+  flex-wrap: wrap;
+}

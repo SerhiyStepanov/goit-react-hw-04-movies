@@ -3,6 +3,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import { ApiServiceHome } from "../ApiService/ApiService";
 import Loader from "../Loader/Loader";
 import s from "./HomePage.module.css";
+import defauItImage from "../Default/default.jpg";
 
 export default function HomePage() {
   const [movies, setMovies] = useState(null);
@@ -22,6 +23,7 @@ export default function HomePage() {
         setStatus("rejected");
       });
   }, []);
+
   return (
     <div className={s.HomePage}>
       {status === "idle" && <h1>HomePage</h1>}
@@ -34,13 +36,14 @@ export default function HomePage() {
       {status === "resolved" && (
         <ul className={s.HomePageUl}>
           {movies.map((movie) => {
+            const IMAGEURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
             return (
               <li key={movie.id} className={s.CardList}>
                 <Link to={`/movies/${movie.id}`} className={s.CardLink}>
                   <div className={s.Card}>
                     <img
                       className={s.CardImage}
-                      src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                      src={movie.poster_path ? IMAGEURL : defauItImage}
                       alt=""
                     />
                     <div className={s.CardContent}>

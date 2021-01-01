@@ -26,6 +26,7 @@
 .CardGenresList {
   padding-left: 0;
   display: flex;
+  flex-wrap: wrap;
   font-size: 16px;
   color: #fff8dc;
 }
@@ -35,10 +36,6 @@
   list-style: none;
   font-size: 16px;
   color: #fff8dc;
-}
-
-.CardGenresSpan:last-child() {
-  opacity: 0;
 }
 
 .Text {

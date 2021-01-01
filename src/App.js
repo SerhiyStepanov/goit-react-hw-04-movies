@@ -26,7 +26,7 @@ export default function App() {
           <MovieDetailsPage />
         </Route>
 
-        {/* <Redirect to="/" /> */}
+        <Redirect to="/" />
       </Switch>
     </Fragment>
   );

@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Route,
+  useParams,
+  useRouteMatch,
+} from "react-router-dom";
+import { useRouterMatch } from "react-router-dom";
 import { ApiServiceDetails } from "../ApiService/ApiService";
 import Cast from "../Cast/Cast";
 import Reviews from "../Reviews/Reviews";
@@ -8,6 +15,7 @@ import s from "./MovieDetailsPage.module.css";
 import defauItImage from "../Default/default.jpg";
 
 export default function MovieDetailsPage() {
+  const { url } = useRouteMatch;
   const { moviesId } = useParams();
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(null);
@@ -63,9 +71,13 @@ export default function MovieDetailsPage() {
         </>
       )}
 
-      <Cast moviesId={moviesId} />
+      <Route to={`${url}${moviesId}/cast`}>
+        <Cast moviesId={moviesId} />
+      </Route>
 
-      <Reviews moviesId={moviesId} />
+      {/* <Cast moviesId={moviesId} /> */}
+
+      {/* <Reviews moviesId={moviesId} /> */}
     </div>
   );
 }
