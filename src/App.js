@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 import HomePage from "./Components/HomePage";
 import MoviesPage from "./Components/MoviesPage";
@@ -26,9 +26,7 @@ export default function App() {
           <MovieDetailsPage />
         </Route>
 
-        <Route>
-          <HomePage />
-        </Route>
+        {/* <Redirect to="/" /> */}
       </Switch>
     </Fragment>
   );

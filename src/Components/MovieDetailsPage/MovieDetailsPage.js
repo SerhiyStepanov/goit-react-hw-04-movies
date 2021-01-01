@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ApiServiceDetails } from "../ApiService/ApiService";
+import Cast from "../Cast/Cast";
+import Reviews from "../Reviews/Reviews";
 import Loader from "../Loader/Loader";
 import s from "./MovieDetailsPage.module.css";
 
@@ -50,6 +52,10 @@ export default function MovieDetailsPage() {
           </div>
         </>
       )}
+
+      <Cast moviesId={moviesId} />
+
+      <Reviews moviesId={moviesId} />
     </div>
   );
 }

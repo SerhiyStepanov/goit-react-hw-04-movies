@@ -22,9 +22,7 @@ export default function MoviesPage() {
       .then((data) => {
         setSearch(data.results);
       })
-      .catch((error) => {
-        setError(error);
-      });
+      .catch((error) => setError(error));
   }, [query]);
 
   return (
