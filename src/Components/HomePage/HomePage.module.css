@@ -1,13 +1,14 @@
 .HomePage {
-  padding-bottom: 50px;
+  padding: 48px;
 }
 
 .HomePageUl {
-  padding-left: 30px;
-  padding-right: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 24px;
 }
 
 .CardList {
@@ -28,13 +29,11 @@
 }
 
 .CardContent {
-  padding: 6px;
+  padding: 4px;
 }
 
 .Title {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 6px;
+  margin: 6px;
   font-size: 18px;
   color: #fff8dc;
 }

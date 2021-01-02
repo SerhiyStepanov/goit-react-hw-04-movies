@@ -60,7 +60,7 @@ export default function MovieDetailsPage() {
               </ul>
             </div>
           </div>
-          <hr />
+          <hr style={{ marginTop: "24px", marginBottom: "24px" }} />
         </>
       )}
       <NavLink
