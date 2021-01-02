@@ -20,7 +20,7 @@ export default function Reviews({ moviesId }) {
 
   return (
     <>
-      <h3 className={s.ReviewsListTitle}>Reviews</h3>
+      <h3 className={s.reviewsListTitle}>Reviews </h3>
       <ul className={s.reviewsList}>
         {reviews &&
           reviews.map((el) => {

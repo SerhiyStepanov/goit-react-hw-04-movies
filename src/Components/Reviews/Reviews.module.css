@@ -12,7 +12,7 @@
 .reviewsItem {
   list-style: none;
 }
-.reviewsTitle {
+.reviewsListTitle {
   display: block;
   font-size: 18px;
   text-align: center;
