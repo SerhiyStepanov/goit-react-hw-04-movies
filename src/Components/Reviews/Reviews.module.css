@@ -1,3 +1,10 @@
+.reviewsTitle {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  color: #fff8dc;
+}
+
 .reviewsList {
   padding-left: 0;
 }
