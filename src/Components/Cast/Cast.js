@@ -6,6 +6,7 @@ import s from "./Cast.module.css";
 export default function Cast({ moviesId }) {
   const [cast, setCast] = useState([]);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     if (!moviesId) {
       return;
@@ -14,8 +15,9 @@ export default function Cast({ moviesId }) {
       .then((data) => {
         setCast(data.cast);
       })
-      .catch((error) => setError(error));
-  }, [moviesId]);
+      .catch(error);
+    setError(error);
+  }, [moviesId, error]);
   return (
     <>
       <h3 className={s.CastListTitle}>Cast </h3>
@@ -32,7 +34,6 @@ export default function Cast({ moviesId }) {
                       : defaultAvatar
                   }
                   alt=""
-                  className=""
                 />
                 <p className={s.CastCardText}> {el.name}</p>
               </>

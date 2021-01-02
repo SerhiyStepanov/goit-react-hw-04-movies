@@ -14,8 +14,9 @@ export default function Reviews({ moviesId }) {
       .then((data) => {
         setReviews(data.results);
       })
-      .catch((error) => setError(error));
-  }, [moviesId]);
+      .catch(error);
+    setError(error);
+  }, [moviesId, error]);
 
   return (
     <>

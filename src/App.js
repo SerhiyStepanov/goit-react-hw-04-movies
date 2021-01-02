@@ -1,11 +1,17 @@
 import { Fragment } from "react";
+import { Suspense, lazy } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Navigation from "./Components/Navigation";
-import HomePage from "./Components/HomePage";
-import MoviesPage from "./Components/MoviesPage";
-import MovieDetailsPage from "./Components/MovieDetailsPage";
+import Loader from "./Components/Loader/Loader";
 import "./App.css";
-import Cast from "./Components/Cast/Cast";
+// import HomePage from "./Components/HomePage";
+const HomePage = lazy(() => import("./Components/HomePage/HomePage.js"));
+// import MoviesPage from "./Components/MoviesPage";
+const MoviesPage = lazy(() => import("./Components/MoviesPage/MoviesPage.js"));
+// import MovieDetailsPage from "./Components/MovieDetailsPage";
+const MovieDetailsPage = lazy(() =>
+  import("./Components/MovieDetailsPage/MovieDetailsPage.js")
+);
 
 export default function App() {
   return (
@@ -13,22 +19,23 @@ export default function App() {
       <Navigation />
 
       <hr />
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
 
-      <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>
+          <Route path="/movies" exact>
+            <MoviesPage />
+          </Route>
 
-        <Route path="/movies" exact>
-          <MoviesPage />
-        </Route>
+          <Route path="/movies/:moviesId">
+            <MovieDetailsPage />
+          </Route>
 
-        <Route path="/movies/:moviesId">
-          <MovieDetailsPage />
-        </Route>
-
-        <Redirect to="/" />
-      </Switch>
+          <Redirect to="/" />
+        </Switch>
+      </Suspense>
     </Fragment>
   );
 }

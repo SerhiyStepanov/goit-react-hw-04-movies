@@ -28,7 +28,7 @@ export default function MovieDetailsPage() {
       .catch(error);
     setError(error);
     setStatus("rejected");
-  }, []);
+  }, [moviesId, error]);
 
   const IMAGEURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
   return (

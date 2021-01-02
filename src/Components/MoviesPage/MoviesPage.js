@@ -22,8 +22,9 @@ export default function MoviesPage() {
       .then((data) => {
         setSearch(data.results);
       })
-      .catch((error) => setError(error));
-  }, [query]);
+      .catch(error);
+    setError(error);
+  }, [query, error]);
 
   return (
     <div className={s.Container}>

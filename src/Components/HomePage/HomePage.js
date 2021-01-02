@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ApiServiceHome } from "../ApiService/ApiService";
 import Loader from "../Loader/Loader";
 import s from "./HomePage.module.css";
@@ -9,7 +9,7 @@ export default function HomePage() {
   const [movies, setMovies] = useState(null);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("idle");
-  const { url } = useRouteMatch();
+  // const { url } = useRouteMatch();
 
   useEffect(() => {
     setStatus("pending");
