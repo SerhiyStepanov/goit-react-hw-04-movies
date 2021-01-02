@@ -1,0 +1,33 @@
+.goToTop {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  background-color: #fff8dc;
+  font-size: 20px;
+  color: #19324b;
+  /* mix-blend-mode: difference; */
+  /* z-index: 1000; */
+}
+
+.goToTopdisplay {
+  animation: showGoToTop 0.4s ease-in 1;
+}
+
+.goToTophide {
+  animation: showGoToTop 0.4s ease-in 1 reverse;
+}
+
+@keyframes showGoToTop {
+  0% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

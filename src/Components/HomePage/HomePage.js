@@ -4,6 +4,7 @@ import { ApiServiceHome } from "../ApiService/ApiService";
 import Loader from "../Loader/Loader";
 import s from "./HomePage.module.css";
 import defauItImage from "../Default/default.jpg";
+import GoToTop from "../Button/GoToTop";
 
 export default function HomePage() {
   const [movies, setMovies] = useState(null);
@@ -56,6 +57,7 @@ export default function HomePage() {
           })}
         </ul>
       )}
+      <GoToTop />
     </div>
   );
 }
