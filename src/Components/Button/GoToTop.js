@@ -42,7 +42,7 @@ export default function GoToTop() {
         view.setUpEventListener();
       }}
     >
-      <FiArrowUpCircle style={{ width: "24px", height: "24px" }} />
+      <FiArrowUpCircle style={{ width: "30px", height: "30px" }} />
     </div>,
     buttonTop
   );
