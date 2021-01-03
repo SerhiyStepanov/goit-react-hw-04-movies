@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ApiServiceSearch } from "../ApiService/ApiService";
 import s from "./MoviesPage.module.css";
 import defauItImage from "../Default/default.jpg";
+import GoToTop from "../Button/GoToTop";
 
 export default function MoviesPage() {
   const [query, setQuery] = useState("");
@@ -37,7 +38,6 @@ export default function MoviesPage() {
           className={s.Input}
         />
       </label>
-
       {search.length > 0 && (
         <ul className={s.HomePageUl}>
           {search.map((movie) => {
@@ -61,6 +61,7 @@ export default function MoviesPage() {
           })}
         </ul>
       )}
+      <GoToTop />
     </div>
   );
 }

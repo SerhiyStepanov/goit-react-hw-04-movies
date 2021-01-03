@@ -6,6 +6,7 @@ import Reviews from "../Reviews/Reviews";
 import Loader from "../Loader/Loader";
 import s from "./MovieDetailsPage.module.css";
 import defauItImage from "../Default/default.jpg";
+import GoToTop from "../Button/GoToTop";
 
 export default function MovieDetailsPage() {
   const { url, path } = useRouteMatch();
@@ -85,6 +86,8 @@ export default function MovieDetailsPage() {
       <Route path={`${path}/reviews`}>
         {moviesId && <Reviews moviesId={moviesId} />}
       </Route>
+
+      <GoToTop />
     </div>
   );
 }
