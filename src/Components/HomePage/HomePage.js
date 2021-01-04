@@ -29,7 +29,7 @@ export default function HomePage() {
     <div className={s.HomePage}>
       {status === "idle" && <h1>HomePage</h1>}
       {status === "pending" && (
-        <div style={{ textAlign: "center", marginTop: "30%" }}>
+        <div>
           <Loader />
         </div>
       )}

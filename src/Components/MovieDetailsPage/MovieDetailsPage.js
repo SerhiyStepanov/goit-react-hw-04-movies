@@ -16,6 +16,16 @@ export default function MovieDetailsPage() {
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("idle");
+  const [good, setGood] = useState(0);
+  const [bad, setBad] = useState(0);
+
+  const btnGoodIncrement = () => {
+    setGood((state) => state + 1);
+  };
+
+  const btnBadIncrement = () => {
+    setBad((state) => state + 1);
+  };
 
   useEffect(() => {
     if (!moviesId) {
@@ -45,20 +55,28 @@ export default function MovieDetailsPage() {
             <div className={s.CardImage}>
               <img src={movie.poster_path ? IMAGEURL : defauItImage} alt="" />
               <div className={s.btnContainer}>
-                <button className={s.btnGood}>
+                <button
+                  type="button"
+                  className={s.btnGood}
+                  onClick={btnGoodIncrement}
+                >
                   <FaRegThumbsUp style={{ color: "#19324b", fontSize: 20 }} />
                   <span
                     style={{ color: "#19324b", fontSize: 20, fontWeight: 600 }}
                   >
-                    0
+                    {good}
                   </span>
                 </button>
-                <button className={s.btnBad}>
+                <button
+                  type="button"
+                  className={s.btnBad}
+                  onClick={btnBadIncrement}
+                >
                   <FaRegThumbsDown style={{ color: "#19324b", fontSize: 20 }} />
                   <span
                     style={{ color: "#19324b", fontSize: 20, fontWeight: 600 }}
                   >
-                    0
+                    {bad}
                   </span>
                 </button>
               </div>
