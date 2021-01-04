@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, Route, useParams, useRouteMatch } from "react-router-dom";
+import { FaRegThumbsUp } from "react-icons/fa";
+import { FaRegThumbsDown } from "react-icons/fa";
 import { ApiServiceDetails } from "../ApiService/ApiService";
 import Cast from "../Cast/Cast";
 import Reviews from "../Reviews/Reviews";
@@ -42,6 +44,24 @@ export default function MovieDetailsPage() {
           <div className={s.CardContainer}>
             <div className={s.CardImage}>
               <img src={movie.poster_path ? IMAGEURL : defauItImage} alt="" />
+              <div className={s.btnContainer}>
+                <button className={s.btnGood}>
+                  <FaRegThumbsUp style={{ color: "#19324b", fontSize: 20 }} />
+                  <span
+                    style={{ color: "#19324b", fontSize: 20, fontWeight: 600 }}
+                  >
+                    0
+                  </span>
+                </button>
+                <button className={s.btnBad}>
+                  <FaRegThumbsDown style={{ color: "#19324b", fontSize: 20 }} />
+                  <span
+                    style={{ color: "#19324b", fontSize: 20, fontWeight: 600 }}
+                  >
+                    0
+                  </span>
+                </button>
+              </div>
             </div>
             <div className={s.CardContent}>
               <h4 className={s.CardTitle}>{movie.title}</h4>
