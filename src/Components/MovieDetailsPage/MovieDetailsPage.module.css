@@ -41,7 +41,8 @@
 
 .btnGood:hover,
 btnGood:focus {
-  background-color: #00c800;
+  /* background-color: #00c800; */
+  box-shadow: 0 0 0.5em 0.3em #00c800;
 }
 
 .btnBad {
@@ -50,7 +51,8 @@ btnGood:focus {
 
 .btnBad:hover,
 .btnBad:focus {
-  background-color: #c80000;
+  /* background-color: #c80000; */
+  box-shadow: 0 0 0.5em 0.3em #c80000;
 }
 
 .CardTitle {
