@@ -12,9 +12,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100vh;
-  width: 390px;
-  padding: 6px;
+  max-width: 100%;
+  width: 380px;
+  height: auto;
+  padding: 3px;
   background-color: #fff8dc;
   border-radius: 3px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),

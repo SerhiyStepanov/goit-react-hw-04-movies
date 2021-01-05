@@ -5,13 +5,6 @@ import s from "./Modal.module.css";
 const modalRoot = document.querySelector("#modal-root");
 
 export default function Modal({ closeModal, children }) {
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeydown);
-    return () => {
-      window.removeEventListener("keydown", handleKeydown);
-    };
-  }, []);
-
   const handleKeydown = (e) => {
     if (e.code === "Escape") {
       closeModal();
@@ -23,11 +16,18 @@ export default function Modal({ closeModal, children }) {
       closeModal();
     }
   };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, [handleKeydown]);
+
   return createPortal(
     <div className={s.backdrop} onClick={clickOnBackdrop}>
       <div className={s.modal}>{children}</div>
     </div>,
-
     modalRoot
   );
 }
