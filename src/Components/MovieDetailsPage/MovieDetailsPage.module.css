@@ -20,6 +20,11 @@
   cursor: pointer;
 }
 
+.image:hover,
+.image:focus {
+  box-shadow: 0 0 0.75em 0.5em #fff8dc;
+}
+
 .btnContainer {
   display: flex;
   align-items: center;
