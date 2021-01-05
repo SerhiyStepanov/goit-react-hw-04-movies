@@ -16,6 +16,10 @@
   border-radius: 3px;
 }
 
+.image {
+  cursor: pointer;
+}
+
 .btnContainer {
   display: flex;
   align-items: center;

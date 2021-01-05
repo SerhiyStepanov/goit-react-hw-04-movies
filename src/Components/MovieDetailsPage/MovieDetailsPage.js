@@ -3,6 +3,7 @@ import { NavLink, Route, useParams, useRouteMatch } from "react-router-dom";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { FaRegThumbsDown } from "react-icons/fa";
 import { ApiServiceDetails } from "../ApiService/ApiService";
+import Modal from "../Modal/Modal";
 import Cast from "../Cast/Cast";
 import Reviews from "../Reviews/Reviews";
 import Loader from "../Loader/Loader";
@@ -16,6 +17,8 @@ export default function MovieDetailsPage() {
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("idle");
+  const [modal, setModal] = useState(false);
+  const [modalImage, setModalImage] = useState("");
   const [good, setGood] = useState(0);
   const [bad, setBad] = useState(0);
 
@@ -44,6 +47,16 @@ export default function MovieDetailsPage() {
   }, [moviesId, error]);
 
   const IMAGEURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+
+  const showModal = (IMAGEURL) => {
+    setModal(true);
+    setModalImage(IMAGEURL);
+  };
+
+  const closeModal = () => {
+    setModal(false);
+  };
+
   return (
     <div className={s.Container}>
       {status === "idle" && <h1>MovieDetailsPage</h1>}
@@ -53,7 +66,9 @@ export default function MovieDetailsPage() {
         <>
           <div className={s.CardContainer}>
             <div className={s.CardImage}>
-              <img src={movie.poster_path ? IMAGEURL : defauItImage} alt="" />
+              <div className={s.image} onClick={() => showModal(IMAGEURL)}>
+                <img src={movie.poster_path ? IMAGEURL : defauItImage} alt="" />
+              </div>
               <div className={s.btnContainer}>
                 <button
                   type="button"
@@ -99,6 +114,12 @@ export default function MovieDetailsPage() {
               </ul>
             </div>
           </div>
+          {modal && (
+            <Modal closeModal={closeModal}>
+              {<img src={modalImage} alt="" />}
+            </Modal>
+          )}
+
           <hr style={{ marginTop: "24px", marginBottom: "24px" }} />
         </>
       )}
