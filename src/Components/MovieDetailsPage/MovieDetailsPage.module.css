@@ -11,19 +11,23 @@
 }
 
 .CardImage {
-  min-width: 380px;
+  min-width: 280px;
+  width: 280px;
   height: auto;
-  /* width: 260px; */
   border-radius: 3px;
 }
 
 .image {
   cursor: pointer;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .image:hover,
 .image:focus {
   box-shadow: 0 0 0.75em 0.5em #fff8dc;
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btnContainer {
@@ -47,22 +51,24 @@
 
 .btnGood {
   composes: btn;
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btnGood:hover,
 btnGood:focus {
-  /* background-color: #00c800; */
   box-shadow: 0 0 0.5em 0.3em #00c800;
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btnBad {
   composes: btn;
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btnBad:hover,
 .btnBad:focus {
-  /* background-color: #c80000; */
   box-shadow: 0 0 0.5em 0.3em #c80000;
+  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .CardTitle {

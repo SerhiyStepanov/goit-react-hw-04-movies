@@ -46,7 +46,7 @@ export default function MovieDetailsPage() {
     setStatus("rejected");
   }, [moviesId, error]);
 
-  const IMAGEURL = `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`;
+  const IMAGEURL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
 
   const showModal = (IMAGEURL) => {
     setModal(true);
@@ -67,10 +67,7 @@ export default function MovieDetailsPage() {
           <div className={s.CardContainer}>
             <div className={s.CardImage}>
               <div className={s.image} onClick={() => showModal(IMAGEURL)}>
-                <img
-                  src={movie.backdrop_path ? IMAGEURL : defauItImage}
-                  alt=""
-                />
+                <img src={movie.poster_path ? IMAGEURL : defauItImage} alt="" />
               </div>
               <div className={s.btnContainer}>
                 <button
@@ -105,10 +102,11 @@ export default function MovieDetailsPage() {
               <p className={s.Text}>Release : {movie.release_date}</p>
               <p className={s.Text}>Budget : {movie.budget}</p>
               <p className={s.Text}>Id : {movie.id}</p>
+              <p className={s.Text}>Runtime : {movie.runtime} min .</p>
               <p className={s.CardGenresList}>
                 Genres :
                 <span className={s.CardGenres}>
-                  {movie.genres.map((el) => el.name).join(" , ")}
+                  {movie.genres.map((el) => el.name).join(" , ")} .
                 </span>
               </p>
             </div>

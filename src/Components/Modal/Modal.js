@@ -22,7 +22,7 @@ export default function Modal({ closeModal, children }) {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, [handleKeydown]);
+  }, []);
 
   return createPortal(
     <div className={s.backdrop} onClick={clickOnBackdrop}>
