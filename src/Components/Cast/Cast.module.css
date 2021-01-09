@@ -13,13 +13,15 @@
 
 .CastCard {
   display: block;
-  width: 60px;
-  margin: 10px;
+  /* width: 60px; */
+  width: calc((100% - 100px) / 10);
+  margin: 5px;
 }
 
 .CastCardImage {
-  max-width: 60px;
-  height: 90px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .CastCardText {
