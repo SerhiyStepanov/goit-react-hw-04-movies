@@ -98,11 +98,23 @@ export default function MovieDetailsPage() {
             </div>
             <div className={s.CardContent}>
               <h4 className={s.CardTitle}>{movie.title}</h4>
-              <p className={s.Text}>Overview : {movie.overview}</p>
-              <p className={s.Text}>Release : {movie.release_date}</p>
-              <p className={s.Text}>Budget : {movie.budget}</p>
-              <p className={s.Text}>Id : {movie.id}</p>
-              <p className={s.Text}>Runtime : {movie.runtime} min .</p>
+              <p className={s.Text}>
+                Overview : <span className={s.TextSpan}>{movie.overview}</span>
+              </p>
+              <p className={s.Text}>
+                Release :{" "}
+                <span className={s.TextSpan}>{movie.release_date}</span>
+              </p>
+              <p className={s.Text}>
+                Budget : <span className={s.TextSpan}>{movie.budget}</span>
+              </p>
+              <p className={s.Text}>
+                Id : <span className={s.TextSpan}>{movie.id}</span>
+              </p>
+              <p className={s.Text}>
+                Runtime :
+                <span className={s.TextSpan}> {movie.runtime} min .</span>
+              </p>
               <p className={s.CardGenresList}>
                 Genres :
                 <span className={s.CardGenres}>

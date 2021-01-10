@@ -73,7 +73,7 @@ btnGood:focus {
 
 .CardTitle {
   margin-top: 0;
-  font-size: 24px;
+  font-size: 26px;
   color: #fff8dc;
 }
 
@@ -81,7 +81,8 @@ btnGood:focus {
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 600;
   color: #fff8dc;
 }
 
@@ -94,7 +95,14 @@ btnGood:focus {
 }
 
 .Text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff8dc;
+}
+
+.TextSpan {
   font-size: 16px;
+  font-weight: 400;
   color: #fff8dc;
 }
 
