@@ -83,7 +83,8 @@ btnGood:focus {
   flex-wrap: wrap;
   font-size: 18px;
   font-weight: 600;
-  color: #fff8dc;
+  color: #c89632;
+  /* color: #fff8dc; */
 }
 
 .CardGenres {
@@ -91,13 +92,15 @@ btnGood:focus {
   margin-left: 6px;
   list-style: none;
   font-size: 16px;
+  font-weight: 400;
   color: #fff8dc;
 }
 
 .Text {
   font-size: 18px;
   font-weight: 600;
-  color: #fff8dc;
+  color: #c89632;
+  /* color: #fff8dc; */
 }
 
 .TextSpan {

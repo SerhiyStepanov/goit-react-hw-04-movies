@@ -3,12 +3,11 @@
 }
 
 .HomePageUl {
+  margin: 0;
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0;
-  padding-left: 0;
-  padding-bottom: 24px;
 }
 
 .CardList {
