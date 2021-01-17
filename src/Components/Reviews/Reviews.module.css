@@ -2,7 +2,7 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  color: #fff8dc;
+  color: var(--primary-color);
 }
 
 .reviewsList {
@@ -16,10 +16,10 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  color: #fff8dc;
+  color: var(--acсent-color);
 }
 .reviewsText {
   padding: 3px;
   font-size: 14px;
-  color: #fff8dc;
+  color: var(--primary-color);
 }

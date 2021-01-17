@@ -10,5 +10,5 @@
 
 .activLink {
   text-decoration: none;
-  color: #c89632;
+  color: var(--acсent-color);
 }

@@ -8,7 +8,7 @@
   display: block;
   font-size: 18px;
   text-align: center;
-  color: #fff8dc;
+  color: var(--acсent-color);
 }
 
 .CastCard {
@@ -27,5 +27,5 @@
 .CastCardText {
   padding: 3px;
   font-size: 10px;
-  color: #fff8dc;
+  color: var(--primary-color);
 }

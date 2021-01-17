@@ -18,3 +18,11 @@ img {
   display: block;
   height: auto;
 }
+
+:root {
+  --primary-color: #fff8dc;
+
+  --acсent-color: #c89632;
+
+  --cubic: cubic-bezier(0.23, 1, 0.32, 1);
+}

@@ -8,10 +8,9 @@
   right: 24px;
   border-radius: 50%;
   box-sizing: content-box;
-  background-color: #fff8dc;
-  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: var(--primary-color);
+  transition: box-shadow 300ms var(--cubic);
   /* font-size: 30px; */
-
   /* mix-blend-mode: difference; */
   /* z-index: 1000; */
 }
@@ -35,6 +34,6 @@
 
 .goToTop:hover,
 .goToTop:focus {
-  box-shadow: 0 0 0.5em 0.3em #fff8dc;
-  transition: box-shadow 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 0 0.5em 0.3em var(--primary-color);
+  transition: box-shadow 300ms var(--cubic);
 }
