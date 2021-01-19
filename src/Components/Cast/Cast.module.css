@@ -13,7 +13,6 @@
 
 .CastCard {
   display: block;
-  /* width: 60px; */
   width: calc((100% - 100px) / 10);
   margin: 5px;
 }
@@ -22,6 +21,8 @@
   display: block;
   max-width: 100%;
   height: auto;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .CastCardText {
