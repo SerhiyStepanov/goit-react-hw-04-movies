@@ -59,7 +59,7 @@
 
 .btnGood:hover,
 btnGood:focus {
-  box-shadow: 0 0 0.5em 0.3em #00c800;
+  box-shadow: 0 0 0.5em 0.3em rgb(0, 220, 0);
   transition: box-shadow 300ms var(--cubic);
 }
 
@@ -70,7 +70,7 @@ btnGood:focus {
 
 .btnBad:hover,
 .btnBad:focus {
-  box-shadow: 0 0 0.5em 0.3em #c80000;
+  box-shadow: 0 0 0.5em 0.3em rgb(220, 0, 0);
   transition: box-shadow 300ms var(--cubic);
 }
 
@@ -102,7 +102,6 @@ btnGood:focus {
   font-size: 18px;
   font-weight: 600;
   color: var(--acсent-color);
-  /* color: #fff8dc; */
 }
 
 .TextSpan {

@@ -12,12 +12,14 @@
 .reviewsItem {
   list-style: none;
 }
+
 .reviewsListTitle {
   display: block;
   font-size: 18px;
   text-align: center;
   color: var(--acсent-color);
 }
+
 .reviewsText {
   padding: 3px;
   font-size: 14px;
