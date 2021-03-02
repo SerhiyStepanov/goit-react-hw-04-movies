@@ -25,7 +25,7 @@ export default function Cast({ moviesId }) {
         {cast.map((el) => {
           return (
             <li key={el.id} className={s.CastCard}>
-              <>
+              <div>
                 <img
                   className={s.CastCardImage}
                   src={
@@ -36,7 +36,7 @@ export default function Cast({ moviesId }) {
                   alt=""
                 />
                 <p className={s.CastCardText}> {el.name}</p>
-              </>
+              </div>
             </li>
           );
         })}

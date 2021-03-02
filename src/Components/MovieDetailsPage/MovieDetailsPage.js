@@ -99,28 +99,30 @@ export default function MovieDetailsPage() {
             <div className={s.CardContent}>
               <h4 className={s.CardTitle}>{movie.title}</h4>
               <p className={s.Text}>
-                Overview : <span className={s.TextSpan}>{movie.overview}</span>
+                Overview: <span className={s.TextSpan}>{movie.overview}</span>
               </p>
               <p className={s.Text}>
-                Release :{" "}
+                Release:{" "}
                 <span className={s.TextSpan}>{movie.release_date}</span>
               </p>
               <p className={s.Text}>
-                Budget : <span className={s.TextSpan}>{movie.budget}</span>
+                Budget: <span className={s.TextSpan}>{movie.budget}</span>
               </p>
               <p className={s.Text}>
-                Id : <span className={s.TextSpan}>{movie.id}</span>
+                Id: <span className={s.TextSpan}>{movie.id}</span>
               </p>
               <p className={s.Text}>
-                Runtime :
+                Runtime:
                 <span className={s.TextSpan}> {movie.runtime} min .</span>
               </p>
-              <p className={s.CardGenresList}>
-                Genres :
-                <span className={s.CardGenres}>
-                  {movie.genres.map((el) => el.name).join(" , ")} .
-                </span>
-              </p>
+              {movie.genres !== "" && (
+                <p className={s.CardGenresList}>
+                  Genres:
+                  <span className={s.CardGenres}>
+                    {movie.genres.map((el) => el.name).join(" , ")}.
+                  </span>
+                </p>
+              )}
             </div>
           </div>
           {modal && (
@@ -132,6 +134,7 @@ export default function MovieDetailsPage() {
           <hr style={{ marginTop: "24px", marginBottom: "24px" }} />
         </>
       )}
+
       <NavLink
         to={`${url}/cast`}
         className={s.link}
@@ -139,6 +142,7 @@ export default function MovieDetailsPage() {
       >
         Cast
       </NavLink>
+
       <NavLink
         to={`${url}/reviews`}
         className={s.link}

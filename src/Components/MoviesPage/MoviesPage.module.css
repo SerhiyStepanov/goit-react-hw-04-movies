@@ -16,20 +16,31 @@
 .HomePageUl {
   margin: 0;
   padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  .HomePageUl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .CardList {
-  width: calc((100% - 100px) / 5);
-  margin: 10px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   overflow: hidden;
   list-style: none;
   border-top-right-radius: 20px;
-  border-bottom-left-radius: 16px;
+  border-bottom-left-radius: 20px;
 
   transition: box-shadow 300ms var(--cubic);
+}
+
+@media screen and (min-width: 768px) {
+  .CardList {
+    width: calc((100% - 100px) / 5);
+  }
 }
 
 .CardLink {
@@ -37,6 +48,7 @@
 }
 
 .CardImage {
+  width: 100%;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   overflow: hidden;
@@ -48,10 +60,17 @@
 }
 
 .Title {
-  margin: 6px;
+  margin-left: 6px;
   font-size: 18px;
   color: var(--primary-color);
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .Title {
+    margin-left: 3px;
+    font-size: 14px;
+  }
 }
 
 .CardList:hover,

@@ -13,20 +13,34 @@
 
 .CastCard {
   display: block;
-  width: calc((100% - 100px) / 10);
-  margin: 5px;
+  width: calc((100% - 40px) / 2);
+  margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .CastCard {
+    width: calc((100% - 80px) / 8);
+    margin: 5px;
+  }
 }
 
 .CastCardImage {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 3px;
   overflow: hidden;
 }
 
 .CastCardText {
-  padding: 3px;
-  font-size: 10px;
+  display: block;
+  margin-left: 4px;
+  font-size: 14px;
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .CastCardText {
+    font-size: 10px;
+  }
 }
