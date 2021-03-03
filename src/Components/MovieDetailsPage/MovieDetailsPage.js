@@ -106,20 +106,31 @@ export default function MovieDetailsPage() {
                 <span className={s.TextSpan}>{movie.release_date}</span>
               </p>
               <p className={s.Text}>
-                Budget: <span className={s.TextSpan}>{movie.budget}</span>
-              </p>
-              <p className={s.Text}>
-                Id: <span className={s.TextSpan}>{movie.id}</span>
-              </p>
-              <p className={s.Text}>
                 Runtime:
-                <span className={s.TextSpan}> {movie.runtime} min .</span>
+                <span className={s.TextSpan}> {movie.runtime} min.</span>
+              </p>
+              {movie.budget > 0 && (
+                <p className={s.Text}>
+                  Budget: <span className={s.TextSpan}>{movie.budget}</span>
+                </p>
+              )}
+              {movie.vote_average > 0 && (
+                <p className={s.Text}>
+                  Average:{" "}
+                  <span className={s.TextSpan}>{movie.vote_average}</span>
+                </p>
+              )}
+              <p className={s.Text}>
+                Languages:{" "}
+                <span className={s.TextSpan}>
+                  {movie.spoken_languages[0].name}
+                </span>
               </p>
               {movie.genres !== "" && (
                 <p className={s.CardGenresList}>
                   Genres:
                   <span className={s.CardGenres}>
-                    {movie.genres.map((el) => el.name).join(" , ")}.
+                    {movie.genres.map((el) => el.name).join(", ")}.
                   </span>
                 </p>
               )}

@@ -111,16 +111,12 @@ btnGood:focus {
 
 .CardGenresList {
   padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
   font-size: 18px;
   font-weight: 600;
   color: var(--acсent-color);
 }
 
 .CardGenres {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: 6px;
   list-style: none;
   font-size: 16px;

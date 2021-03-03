@@ -4,8 +4,8 @@
   justify-items: center;
   cursor: pointer;
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 50%;
   box-sizing: content-box;
   background-color: var(--primary-color);
@@ -16,11 +16,11 @@
 }
 
 .goToTopdisplay {
-  animation: showGoToTop 0.4s ease-in 1;
+  animation: showGoToTop 300ms ease-in 1;
 }
 
 .goToTophide {
-  animation: showGoToTop 0.4s ease-in 1 reverse;
+  animation: showGoToTop 300ms ease-in 1 reverse;
 }
 
 @keyframes showGoToTop {
