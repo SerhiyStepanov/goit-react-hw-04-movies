@@ -120,12 +120,14 @@ export default function MovieDetailsPage() {
                   <span className={s.TextSpan}>{movie.vote_average}</span>
                 </p>
               )}
-              <p className={s.Text}>
-                Languages:{" "}
-                <span className={s.TextSpan}>
-                  {movie.spoken_languages[0].name}
-                </span>
-              </p>
+              {movie.spoken_languages.length > 0 && (
+                <p className={s.Text}>
+                  Languages:{" "}
+                  <span className={s.TextSpan}>
+                    {movie.spoken_languages[0].name}
+                  </span>
+                </p>
+              )}
               {movie.genres !== "" && (
                 <p className={s.CardGenresList}>
                   Genres:
