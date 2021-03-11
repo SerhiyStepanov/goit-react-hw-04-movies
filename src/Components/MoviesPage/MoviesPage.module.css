@@ -7,10 +7,15 @@
 .Input {
   margin-bottom: 10px;
   padding: 6px 12px;
-  border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  background-color: #19324b;
+  outline: 1px solid var(--primary-color);
+  border: none;
+  background-color: var(--background-color);
   color: var(--primary-color);
+}
+
+.Input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .HomePageUl {
