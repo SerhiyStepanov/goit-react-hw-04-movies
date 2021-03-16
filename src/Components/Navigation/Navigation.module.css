@@ -3,6 +3,7 @@
   padding-left: 48px;
   font-size: 20px;
 }
+
 .link {
   margin-right: 20px;
   text-decoration: none;
@@ -12,4 +13,10 @@
 .activLink {
   text-decoration: none;
   color: var(--acсent-color);
+}
+
+.link:hover,
+.link:focus {
+  outline: 1px solid var(--acсent-color);
+  outline-offset: 10px;
 }
