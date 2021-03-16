@@ -15,7 +15,7 @@
 
 .Input:focus {
   outline: none;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--acсent-color);
 }
 
 .HomePageUl {

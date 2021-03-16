@@ -12,7 +12,7 @@ export default function GoToTop() {
     },
 
     displayScroll: function () {
-      let goToTop = document.getElementById("goToTop");
+      const goToTop = document.querySelector("#goToTop");
       window.addEventListener("scroll", () => {
         let offSetY = window.scrollY;
         let viewHeight = window.innerHeight;
@@ -28,11 +28,10 @@ export default function GoToTop() {
     },
 
     goToTopClick: function () {
-      let goToTop = document.getElementById("goToTop");
+      const goToTop = document.querySelector("#goToTop");
       goToTop.addEventListener("click", () => window.scrollTo(0, 0));
     },
   };
-  //   view.setUpEventListener();
 
   return createPortal(
     <div

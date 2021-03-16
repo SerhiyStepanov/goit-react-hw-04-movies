@@ -21,9 +21,9 @@ img {
 }
 
 :root {
-  --primary-color: #fff8dc;
+  --primary-color: rgb(255, 248, 220);
 
-  --acсent-color: #c89632;
+  --acсent-color: rgb(200, 150, 50);
 
   --background-color: rgb(25, 50, 75);
 

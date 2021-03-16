@@ -4,8 +4,8 @@
   justify-items: center;
   cursor: pointer;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   border-radius: 50%;
   box-sizing: content-box;
   background-color: var(--primary-color);
