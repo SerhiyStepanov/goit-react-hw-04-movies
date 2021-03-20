@@ -144,7 +144,13 @@ export default function MovieDetailsPage() {
             </Modal>
           )}
 
-          <hr style={{ marginTop: "24px", marginBottom: "24px" }} />
+          <hr
+            style={{
+              marginTop: "24px",
+              marginBottom: "24px",
+              color: "var(--acсent-color)",
+            }}
+          />
         </>
       )}
 

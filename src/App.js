@@ -18,7 +18,13 @@ export default function App() {
     <Fragment>
       <Navigation />
 
-      <hr />
+      <hr
+        style={{
+          color: "var(--acсent-color)",
+          marginLeft: "24px",
+          marginRight: "24px",
+        }}
+      />
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path="/" exact>
